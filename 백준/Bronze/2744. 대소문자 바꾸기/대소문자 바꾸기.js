@@ -1,22 +1,12 @@
 const fs = require("fs");
-const input = fs
-  .readFileSync("/dev/stdin")
-  .toString()
-  .trim()
-  .split("")
-  .map(String);
+const input = fs.readFileSync("/dev/stdin").toString().trim().split("");
 
-let result = "";
-
-input.forEach((item) => {
-  const upperCase = item.toUpperCase();
-  const lowerCase = item.toLowerCase();
-
-  if (item === upperCase) {
-    result += lowerCase;
-  } else {
-    result += upperCase;
-  }
-});
+const result = input
+  .map((item) => {
+    return item === item.toUpperCase()
+      ? item.toLowerCase()
+      : item.toUpperCase();
+  })
+  .join("");
 
 console.log(result);
