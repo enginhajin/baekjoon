@@ -6,17 +6,7 @@ const [a, b, c, d, e, f] = fs
   .split(" ")
   .map(Number);
 
-let resultX = 0;
-let resultY = 0;
+const x = (c * e - b * f) / (a * e - b * d);
+const y = (c * d - a * f) / (b * d - a * e);
 
-for (let x = -999; x <= 999; x++) {
-  for (let y = -999; y <= 999; y++) {
-    if (a * x + b * y === c && d * x + e * y === f) {
-      resultX = x;
-      resultY = y;
-      break;
-    }
-  }
-}
-
-console.log(resultX, resultY);
+console.log(`${x} ${y}`);
