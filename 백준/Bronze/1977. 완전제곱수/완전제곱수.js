@@ -6,12 +6,12 @@ const [M, N] = fs
   .split("\n")
   .map(Number);
 
+const start = Math.ceil(Math.sqrt(M));
+const end = Math.floor(Math.sqrt(N));
 const result = [];
 
-for (let i = M; i <= N; i++) {
-  if (Math.sqrt(i) % 1 === 0) {
-    result.push(i);
-  }
+for (let i = start; i <= end; i++) {
+  result.push(i * i);
 }
 
 if (result.length > 0) {
