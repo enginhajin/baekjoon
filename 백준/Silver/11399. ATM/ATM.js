@@ -5,13 +5,11 @@ const nums = data[1].split(" ").map(Number);
 
 nums.sort((a, b) => a - b);
 
-let result = nums[0];
+let result = 0;
+let sum = 0;
 
-for (let i = 1; i < N; i++) {
-  let sum = 0;
-  for (let j = 0; j <= i; j++) {
-    sum += nums[j];
-  }
+for (let i = 0; i < N; i++) {
+  sum += nums[i];
   result += sum;
 }
 
