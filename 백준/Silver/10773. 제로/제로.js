@@ -17,4 +17,4 @@ data.forEach((item) => {
   }
 });
 
-console.log(stack.length ? stack.reduce((acc, curr) => (acc += curr)) : 0);
+console.log(stack.reduce((acc, curr) => acc + curr, 0));
